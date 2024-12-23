@@ -23,6 +23,7 @@ String Menu[] = {
 "      item1      ",          
   "      item2      ",          
   "      item3      " }; 
+  
 const int Menu_Size = sizeof(Menu) / sizeof(Menu[0]);
 
 3*You can add as many items as you want to display in the menu.
@@ -56,7 +57,9 @@ Important note: If you create an item inside a menu without setting a menu for i
 # printpage() function:
 *The function parameters : 
 Exp: page_name = printpage(Menu, Menu_Size,"      Menu      " , "");
+
 String printpage(const String arr[], int sizeArr, String currentPage, String previousPage)
+
 Parameters arr[] : An array of strings representing the menu options displayed on the LCD. Each string must be exactly 16 characters(or 10) long to match the LCD’s format and ensure consistent behavior.
 
 sizeArr : The number of options in the arr[]. It tells the function how many menu items to handle .
