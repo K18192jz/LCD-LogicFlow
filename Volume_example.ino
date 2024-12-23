@@ -7,7 +7,7 @@ const int butDownPin = 8;    // Pin for Down button (navigate down)
 int butok, butdown; // Variables to store the button states (1 or 0)
 
 // Initial page name to start with
-String page_name = "Main Menu"; 
+String page_name = "      Main      "; 
 
 // Define the LCD size (number of rows visible at a time)
 int lcdsize = 4;  // The LCD has 4 rows of text to display
@@ -71,8 +71,8 @@ void loop() {
   // Handle navigation and rendering of pages
   // The pages will be rendered in sequence; however, it doesn't matter the order,
   // The important part is that the items inside the menus (options) should not have the same name
-  page_name = printpage(Main_Menu, Main_Menu_Size, "Main Menu" , ""); // Main menu doesn't need a "back" option
-  page_name = printpage(Settings, Settings_Size, "      Settings  " , "Main Menu"); // Settings menu, with back to "Main Menu"
+  page_name = printpage(Main_Menu, Main_Menu_Size, "      Main      ", ""); // Main menu doesn't need a "back" option
+  page_name = printpage(Settings, Settings_Size, "      Settings  " , "      Main      "); // Settings menu, with back to "Main Menu"
   page_name = printpage(Volume, Volume_Size, "      Volume    " , "      Settings  "); // Volume menu, with back to "Settings"
   
   // Function to check volume selection (updates the volume value) 
@@ -100,7 +100,7 @@ void loop() {
     read();  // Update button states
     if (butok == 1 || butdown == 1) {  // If OK or Down button is pressed, exit the animation
       delay(100);  // Small delay before going back to Main Menu
-      page_name = "Main Menu";  // Go back to the main menu
+      page_name = "      Main      ";  // Go back to the main menu
       break;
     }
   }
