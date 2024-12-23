@@ -61,9 +61,9 @@ arr: An array of strings representing the menu items to be displayed.
 
 sizeArr: The number of items in the array (arr).
 
-currentPage: A string representing the name of the current page.
+currentPage: A string representing the name of the current page should be like "      Volume    " (16 charecters).
 
-previousPage: A string representing the name of the previous page.
+previousPage: A string representing the name of the previous page (when you pick "      back      " ).
 
 Function Workflow:
 
