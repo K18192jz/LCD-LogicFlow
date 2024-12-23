@@ -52,6 +52,7 @@ When the "Start" menu item is selected, a simple cat face animation ("Meow!") is
 
 # How to Use
 Understanding the printpage() Function
+
 The printpage() function is a core part of this program. It is used to display menus on the LCD screen and handle user input for menu navigation. The function is called in a loop to display the pages and handle the user interaction. Here’s a breakdown of how it works:
 
 Function Parameters:
