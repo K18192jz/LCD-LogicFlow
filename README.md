@@ -18,7 +18,7 @@ Pin 8: Down button (used for scrolling through menu items).
 The system uses an I2C LCD with address 0x27 and dimensions of 20 columns and 4 rows.
 
 # Code Flow
- 1. Initialization
+1. Initialization
     
 In the setup() function:
 
@@ -37,6 +37,7 @@ arr: An array of menu items to display on the LCD.
 sizeArr: The number of items in the menu array.
 currentPage: The name of the current page (e.g., "Settings").
 previousPage: The page to return to when the "back" option is selected.
+
 4. Background Code
 
 While navigating through the menu, you can add any background tasks that should run (e.g., checking volume level or updating settings).
@@ -45,7 +46,7 @@ While navigating through the menu, you can add any background tasks that should 
    
 In the Volume Menu, you can select a volume level from 0 to 6. Once selected, the system stores the volume level, and it can be used throughout the program.
 
-7. Custom Actions on Start
+6. Custom Actions on Start
    
 When the "Start" menu item is selected, a simple cat face animation ("Meow!") is displayed, and the system returns to the Main Menu after a brief delay.
 
