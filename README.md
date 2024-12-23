@@ -14,7 +14,9 @@ Lcd:         SDA : A4
                 SCL : A5
 # How to use:
 To use the algorithm, you need to be aware of a few things:
+
 1*The printpage(); function allows you to display your flexible menu (I will explain it further later).
+
 2*To display your custom menu, you need to define it like this:
 String Menu_name=  "      Menu      ";
 String Menu[] = {
@@ -22,16 +24,25 @@ String Menu[] = {
   "      item2      ",          
   "      item3      " }; 
 const int Menu_Size = sizeof(Menu) / sizeof(Menu[0]);
+
 3*You can add as many items as you want to display in the menu.
+
 4*You cannot name two items the same, even in different menus. If you do so, additional code will be required to resolve the conflict:
 String Menu[] = {"      item1      " ,"      item1      " };  -----X
+
 5*You cannot name two menus or a menu and an item with the same name(unless you want to turn the item into a menu than you need to name it as the item). Look at the simple exemple to understand how to apply it
-5*All strings should be 16 characters for the 20x4 LCD and 10 characters for the 16x2 LCD, including the menu name. Here's how it should be formatted:
+
+6*All strings should be 16 characters for the 20x4 LCD and 10 characters for the 16x2 LCD, including the menu name. Here's how it should be formatted:
 For the 20x4 LCD:
+
 String Menu_name = "      Menu      ";  // 16 characters in
+
 String Menu[] = {"      item1      ", "      item2      "}; 
+
 For the 16x2 LCD:
+
 String Menu_name = "   Menu   ";  // 10 characters
+
 String Menu[] = {"   item1   ", "   item2   "}; 
 
 # The loops : 
