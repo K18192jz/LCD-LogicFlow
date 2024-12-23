@@ -58,31 +58,38 @@ The printpage() function is a core part of this program. It is used to display m
 Function Parameters:
 
 arr: An array of strings representing the menu items to be displayed.
+
 sizeArr: The number of items in the array (arr).
+
 currentPage: A string representing the name of the current page.
+
 previousPage: A string representing the name of the previous page.
+
 Function Workflow:
 
 Display the Menu: The printpage() function displays the current page’s menu items on the LCD screen.
 Navigation: The user can navigate through the menu items using the Down button. The cursor moves up and down through the list of options.
+
 Select an Option: The user can press the OK button to select an option.
-Return to Previous Page: If the "back" option is selected, the user is returned to the previousPage.
+
+Return to Previous Page: If the "      back      " option is selected, the user is returned to the previousPage.
 Example Usage:
 Main Menu:
-Menu items: "Start", "Settings", "Exit"
+Menu items: Start, Settings, Exit
 
-"Settings" → navigates to the Settings page
-"Start" → exits to a custom loop with a cat animation and then returns to the Main Menu
-"Exit" → freezes the program
+Settings → navigates to the Settings page
+Start → exits to a custom loop with a cat animation and then returns to the Main Menu
+Exit → freezes the program
 Settings Menu:
-Menu items: "Volume", "Back"
+Menu items: "      Volume    ", "      back      "
 
 "Volume" → navigates to the Volume page
 "Back" → returns to the Main Menu
 Volume Menu:
 Menu items: "0", "1", "2", "3", "4", "5", "6", "Back"
 
-# Select volume level → updates the volume and returns to the Settings menu(for the example)
+Select volume level → updates the volume and returns to the Settings menu(for the example)
+
 "Back" → returns to the Settings menu
 Volume Selection and Update
 For the sake of this example, we included a function checkVolumeSelection() to check the selected volume option and update the Volume_value based on the page_name:
