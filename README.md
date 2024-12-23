@@ -2,9 +2,13 @@
 This program offers a highly flexible menu navigation system in Arduino IDE for an LCD screen, compatible with LCD I2C 4x20 and 2x16 displays, as well as two buttons . It enables users to navigate effortlessly through multiple menus, select options, and adjust settings. The system is easily adaptable to various user interface requirements, making it suitable for both simple and complex menu structures.
 # Features:
 *The workflow is simple and intuitive, requiring only a few minutes to understand. It not only makes your code more organized and clear, and also speeds up the process if you need to recreate or modify the algorithm.
+
 *Create custom menus with unlimited items, despite the LCD size, and navigate through them efficiently.
+
 *Navigate inside the menus with a cursor, displayed as ">> item <<".
+
 *Adjust anything to run in the background while navigating through menus, or design your own custom interface to your script. 
+
 *Compatible with LCD I2C 20x4 and 16x2 displays, using two buttons ('Down' and 'OK'). You can also add additional buttons or features as needed.
 
 # Wiring:
