@@ -42,7 +42,7 @@ previousPage: The page to return to when the "back" option is selected.
 
 While navigating through the menu, you can add any background tasks that should run (e.g., checking volume level or updating settings).
 
-5. Volume Control
+5. Volume Control(exemple)
    
 In the Volume Menu, you can select a volume level from 0 to 6. Once selected, the system stores the volume level, and it can be used throughout the program.
 
