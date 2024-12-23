@@ -75,6 +75,9 @@ You can add any custom code to run in the background while navigating through th
 Additionally, you can add more parameters to the function if needed, allowing you to customize the behavior further based on your specific requirements. This flexibility ensures that you can integrate your own logic and features seamlessly while maintaining the menu navigation system.
 
 
+# Disclaimer:
+
+This is a fully open-source code, and anyone is free to use, modify, or add anything they wish to it. If you base your project on this code, please make sure to credit me by mentioning my account. This ensures that the original work is recognized while allowing others to benefit from your adaptations and improvements.
 
 
 
