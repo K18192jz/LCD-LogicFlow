@@ -14,8 +14,11 @@ This program offers a highly flexible menu navigation system in Arduino IDE for 
 # Wiring:
 Buttons:   Pin7 : button ‘ok’ (optional pin)
                 Pin8 : button ‘down’(optional pin)
+                
 Lcd:         SDA : A4
                 SCL : A5
+<img width="374" alt="2024-12-23 17_47_47-New Arduino Uno Project - Wokwi Simulator" src="https://github.com/user-attachments/assets/be332422-9f39-40fe-8d0a-8511d1f61b60" />
+
 # How to use:
 To use the algorithm, you need to be aware of a few things:
 
