@@ -27,7 +27,7 @@ To use the algorithm, you need to be aware of a few things:
 1*The printpage(); function allows you to display your flexible menu (I will explain it further later).
 
 2*To display your custom menu, you need to define it like this:
-String Menu_name=  "      Menu      ";
+'String Menu_name=  "      Menu      ";'
 String Menu[] = {
 "      item1      ",          
   "      item2      ",          
