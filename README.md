@@ -3,8 +3,11 @@
 This program provides a highly flexible menu navigation system for an LCD screen, designed to work with just two buttons. It allows users to easily navigate through multiple menus, select options, and adjust settings (like volume exemple). The system can be easily adapted to various user interface needs, making it suitable for simple or more complex menu structures.
 # Features:
 Multi-page Navigation: Navigate between menus such as Main Menu, Settings, and Volume.
+
 Button Input: Use two buttons (OK and Down) for navigation.
+
 Background Process: A background task runs while navigating through the menus.
+
 Pin Setup:
 Pin 7: OK button (used for selection).
 Pin 8: Down button (used for scrolling through menu items).
