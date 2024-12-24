@@ -1,8 +1,5 @@
 # LCD LogicFlow: Flexible Menu Navigation
 
-```java
-String Menu[] = {"      item1      ", "      item1      "};
-```
 
 This program offers a highly flexible menu navigation system in Arduino IDE for an LCD screen, compatible with LCD I2C 4x20 and 2x16 displays, as well as two buttons . It enables users to navigate effortlessly through multiple menus, select options, and adjust settings. The system is easily adaptable to various user interface requirements, making it suitable for both simple and complex menu structures.
 # Features:
@@ -35,6 +32,8 @@ To use the algorithm, you need to be aware of a few things:
 1*The printpage(); function allows you to display your flexible menu (I will explain it further later).
 
 2*To display your custom menu, you need to define it like this:
+```C++
+
 
 String Menu_name=  "      Menu      ";
 
@@ -43,6 +42,8 @@ String Menu[] = {
   "      item2      ",          
   "      item3      " }; 
   
+
+```
 const int Menu_Size = sizeof(Menu) / sizeof(Menu[0]);
 
 3*You can add as many items as you want to display in the menu.
