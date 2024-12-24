@@ -95,7 +95,7 @@ void loop() {
       lcd.setCursor(0, 3);
       lcd.print("       Meow!    ");
       delay(1000); 
-      repeat++;  // Avoid repeating animation
+      repeat=1;  // Avoid repeating animation
     }
     read();  // Update button states
     if (butok == 1 || butdown == 1) {  // If OK or Down button is pressed, exit the animation
