@@ -76,10 +76,6 @@ Important note: If you create an item inside a menu without setting a menu for i
 
 # printpage() function:
 *The function parameters : 
-Exp: 
-```C++
-page_name = printpage(Menu, Menu_Size,"      Menu      " , "");
-```
 ```C++
 String printpage(const String arr[], int sizeArr, String currentPage, String previousPage);
 ```
@@ -91,7 +87,10 @@ currentPage: The name of the current page (e.g.,Menu_name ), displayed as a head
 
 previousPage: The name of the previous menu ```(e.g., "      Menu      ")```. Selecting  
 ```"      back      "``` will update page_name to this value, returning to the previous menu.
-
+Exp: 
+```C++
+page_name = printpage(Menu, Menu_Size,"      Menu      " , "");
+```
 
 *The printpage() its a loop that the code will entre incase the page_name variable set to the menu name will allow you to make a flexible menu with limitless items inside 
 You can add any custom code to run in the background while navigating through the menus.
