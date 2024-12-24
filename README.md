@@ -37,8 +37,8 @@ String Menu_name=  "      Menu      ";
 
 String Menu[] = {
 "      item1      ",          
-  "      item2      ",          
-  "      item3      " }; 
+"      item2      ",          
+"      item3      " }; 
   
 
 
