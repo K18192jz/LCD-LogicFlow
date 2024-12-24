@@ -39,10 +39,9 @@ String Menu[] = {
 "      item1      ",          
 "      item2      ",          
 "      item3      " }; 
-  
-
 
 const int Menu_Size = sizeof(Menu) / sizeof(Menu[0]);
+
 page_name = printpage(Menu, Menu_Size, Menu_name, ""); 
 
 ```
