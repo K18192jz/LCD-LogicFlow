@@ -110,6 +110,7 @@ void loop() {
 void read() {
   butok = digitalRead(butOkPin);     // Read the state of the "OK" button
   butdown = digitalRead(butDownPin); // Read the state of the "Down" button
+  lcd.clear();  // Clear the screen
   delay(100); // Simple debounce delay
 }
 
