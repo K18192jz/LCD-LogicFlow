@@ -33,8 +33,6 @@ To use the algorithm, you need to be aware of a few things:
 
 2*To display your custom menu, you need to define it like this:
 ```C++
-
-
 String Menu_name=  "      Menu      ";
 
 String Menu[] = {
@@ -43,29 +41,31 @@ String Menu[] = {
   "      item3      " }; 
   
 
-```
+
 const int Menu_Size = sizeof(Menu) / sizeof(Menu[0]);
+```
 
 3*You can add as many items as you want to display in the menu.
 
 4*You cannot name two items the same, even in different menus. If you do so, additional code will be required to resolve the conflict:
+```C++
 String Menu[] = {"      item1      " ,"      item1      " };  -----X
-
+```
 5*You cannot name two menus or a menu and an item with the same name(unless you want to turn the item into a menu than you need to name it as the item). Look at the simple exemple to understand how to apply it
 
 6*All strings should be 16 characters for the 20x4 LCD and 10 characters for the 16x2 LCD, including the menu name. Here's how it should be formatted:
 For the 20x4 LCD:
-
+```C++
 String Menu_name = "      Menu      ";  // 16 characters in
 
 String Menu[] = {"      item1      ", "      item2      "}; 
-
+```
 For the 16x2 LCD:
-
+```C++
 String Menu_name = "   Menu   ";  // 10 characters
 
 String Menu[] = {"   item1   ", "   item2   "}; 
-
+```
 # The loops : 
 To work with the algorithm, you need to understand that each menu is essentially a loop that the code will enter based on a variable called page_name.
 The page_name variable allows you to navigate between menus and also enables you to create custom loops with your own rules. If you want to exit a menu loop, simply click on an item, and the menu will change to the selected item's menu. This is done by changing the page_name to something else (the item you picked). You can refer to examples for more details. If you wish to display things differently, you can create your own custom loop and implement any logic you want.
@@ -76,22 +76,26 @@ Important note: If you create an item inside a menu without setting a menu for i
 
 # printpage() function:
 *The function parameters : 
-Exp: page_name = printpage(Menu, Menu_Size,"      Menu      " , "");
-
-String printpage(const String arr[], int sizeArr, String currentPage, String previousPage)
-
+Exp: 
+```C++
+page_name = printpage(Menu, Menu_Size,"      Menu      " , "");
+```
+```C++
+String printpage(const String arr[], int sizeArr, String currentPage, String previousPage);
+```
 Parameters arr[] : An array of strings representing the menu options displayed on the LCD. Each string must be exactly 16 characters(or 10) long to match the LCD’s format and ensure consistent behavior.
 
 sizeArr : The number of options in the arr[]. It tells the function how many menu items to handle .
 
 currentPage: The name of the current page (e.g.,Menu_name ), displayed as a header on the LCD.
 
-previousPage: The name of the previous menu (e.g., " Main Menu "). Selecting  
-"      back      " will update page_name to this value, returning to the previous menu.
+previousPage: The name of the previous menu ```(e.g., "      Menu      ")```. Selecting  
+```"      back      "``` will update page_name to this value, returning to the previous menu.
 
 
 *The printpage() its a loop that the code will entre incase the page_name variable set to the menu name will allow you to make a flexible menu with limitless items inside 
-You can add any custom code to run in the background while navigating through the menus. I have set a designated place in the code for you to insert your background code.
+You can add any custom code to run in the background while navigating through the menus.
+I have set a designated place in the code for you to insert your background code.
 Additionally, you can add more parameters to the function if needed, allowing you to customize the behavior further based on your specific requirements. This flexibility ensures that you can integrate your own logic and features seamlessly while maintaining the menu navigation system.
 
 
