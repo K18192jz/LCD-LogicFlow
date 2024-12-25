@@ -23,7 +23,7 @@ Lcd:         SDA : A4
                 SCL : A5
 
 
-<img width="374" alt="2024-12-23 17_47_47-New Arduino Uno Project - Wokwi Simulator" src="https://github.com/user-attachments/assets/be332422-9f39-40fe-8d0a-8511d1f61b60" />
+
 
 <img width="430" alt="animals" src="https://github.com/user-attachments/assets/1325e98d-0953-4359-b230-3a9698a59896" />
 
