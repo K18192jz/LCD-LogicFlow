@@ -12,7 +12,8 @@ This program offers a highly flexible menu navigation system in Arduino IDE for 
 *Adjust anything to run in the background while navigating through menus, or design your own custom interface to your script. 
 
 *Compatible with LCD I2C 20x4 and 16x2 displays, using two buttons ('Down' and 'OK'). You can also add additional buttons or features as needed.
-*You only need the LiquidCrystal library to get started—no additional libraries are required. You can find example files in the examples path. These examples are designed to help you understand the basics and begin working directly without any extra setup.
+
+*You only need the LiquidCrystal library to get started—no additional libraries are required. You can find examples in the examples path. These examples are designed to help you understand the basics and begin working directly without any extra setup.
 
 # Wiring:
 Buttons:   Pin7 : button ‘ok’ (optional pin)
