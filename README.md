@@ -1,5 +1,7 @@
-[EX:01](https://github.com/user-attachments/assets/69995c0e-f193-4517-9016-696a72ed7006)
-[EX:02](https://github.com/user-attachments/assets/2a05d19f-285f-4e67-b8ac-ffdf50dae72e)
+## Check out this GIF
+
+![EX:!](https://github.com/user-attachments/assets/ca7f616c-705e-4055-80c9-a1262699a55d)
+
 
 
 
