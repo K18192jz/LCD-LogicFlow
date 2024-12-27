@@ -1,5 +1,7 @@
-# LCD LogicFlow: Flexible Menu Navigation
+![vedeo gif exacte](https://github.com/user-attachments/assets/409d0056-18c2-425a-8e85-bb1f23fe62d1)# LCD LogicFlow: Flexible Menu Navigation
 
+## Regardez ce GIF![EX: ANIMALS](![vedeo gif exacte](https://github.com/user-attachments/assets/554026c4-36a7-4f21-9406-88f48820ce19)
+)
 
 This program offers a highly flexible menu navigation system in Arduino IDE for an LCD screen, compatible with LCD I2C 4x20 and 2x16 displays, as well as two buttons . It enables users to navigate effortlessly through multiple menus, select options, and adjust settings. The system is easily adaptable to various user interface requirements, making it suitable for both simple and complex menu structures.
 # Features:
