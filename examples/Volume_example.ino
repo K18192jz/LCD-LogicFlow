@@ -101,6 +101,7 @@ void loop() {
     if (butok == 1 || butdown == 1) {  // If OK or Down button is pressed, exit the animation
       delay(100);  // Small delay before going back to Main Menu
       page_name = "      Main      ";  // Go back to the main menu
+      lcd.clear();  // Clear the screen
       break;
     }
   }
@@ -110,7 +111,6 @@ void loop() {
 void read() {
   butok = digitalRead(butOkPin);     // Read the state of the "OK" button
   butdown = digitalRead(butDownPin); // Read the state of the "Down" button
-  lcd.clear();  // Clear the screen
   delay(100); // Simple debounce delay
 }
 
