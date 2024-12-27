@@ -1,5 +1,8 @@
- GIF[EX: ANIMALS]((https://github.com/user-attachments/assets/554026c4-36a7-4f21-9406-88f48820ce19)
-)
+[EX:01](https://github.com/user-attachments/assets/69995c0e-f193-4517-9016-696a72ed7006)
+[EX:02](https://github.com/user-attachments/assets/2a05d19f-285f-4e67-b8ac-ffdf50dae72e)
+
+
+
 
 This program offers a highly flexible menu navigation system in Arduino IDE for an LCD screen, compatible with LCD I2C 4x20 and 2x16 displays, as well as two buttons . It enables users to navigate effortlessly through multiple menus, select options, and adjust settings. The system is easily adaptable to various user interface requirements, making it suitable for both simple and complex menu structures.
 # Features:
