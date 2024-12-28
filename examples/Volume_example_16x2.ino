@@ -124,7 +124,14 @@ String printpage(const String arr[], int sizeArr, String currentPage, String pre
     j = j % sizeArr;  // Ensure j stays within array size
     if (sizeArr < lcdsize) { i = (i ) % sizeArr; }  // Ensure index stays within screen range
     else { i = (i ) % lcdsize; }  // Ensure index stays within LCD rows
-
+    //////////// ADD YOUR BACKGROUND CODE HERE ///////////////
+    ///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
+    Serial.println(Volume_value);  // Output the current volume to the serial monitor while display lcd
+    ///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
     // Handle button navigation
     if (butdown == 1) {
       lcd.setCursor(13, i);
