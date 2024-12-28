@@ -1,4 +1,4 @@
-## Check out this examples
+# LCD LogicFlow: Flexible Menu Navigation
 
 ![EX:1](https://github.com/user-attachments/assets/ca7f616c-705e-4055-80c9-a1262699a55d)
 
