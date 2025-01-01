@@ -1,125 +1,113 @@
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 
-const int butUpPin = 7;      
-const int butDownPin = 2;
-int butup, butdown;
-String ppp = "page1";
+// Pin definitions for buttons
+const int butokPin = 7;      
+const int butDownPin = 8;
+int butok, butdown;
+String page_name = "    Main    ";  // Initialize the page to "Main"
 
+// LCD setup
 int lcdsize = 2;
-LiquidCrystal_I2C lcd(0x27, 16, 2);  // set the LCD address to 0x27 for a 20 chars and 4 line display
+LiquidCrystal_I2C lcd(0x27, 16, 2);  // Initialize LCD with I2C address 0x27, 16 columns, 2 rows
 
-// Define the global string array as page1
-String page1[] = {
-  "    frezz   ",
-  "    frezz   ",
-  "    cat     ",
-  "    frezz   ",
-  "    frezz   ",
-  "    frezz   "
-  
-};
-
-const int page1Size = sizeof(page1) / sizeof(page1[0]);
 
 void setup() {
-  lcd.init();                     
-  lcd.backlight();
+  Serial.begin(9600);            // Start serial communication for debugging
+  lcd.init();                    // Initialize the LCD
+  lcd.backlight();               // Turn on the backlight of the LCD
 
-  pinMode(butUpPin, INPUT);
-  pinMode(butDownPin, INPUT);
+  pinMode(butokPin, INPUT);      // Set button pin as input
+  pinMode(butDownPin, INPUT);    // Set button pin as input
 }
-int repeat=0;
+
+
 void loop() {
+  // Read button states
   read();
-  ppp = printpage(page1, page1Size, "page1");  // Use page1 as the global array
-  while (ppp=="      cool      "){
-    if(repeat == 0){
-    lcd.setCursor(0, 0);
-    lcd.print("       /\\_/\\  ");  
-    delay(1000); 
-    lcd.setCursor(0, 1);
-    lcd.print("      ( o.o )   ");
-    delay(1000); 
-    lcd.setCursor(0, 2);
-    lcd.print("       > ^ <    ");
-    delay(1000); 
-    lcd.setCursor(0, 3);
-    lcd.print("       Meow!    ");
-    repeat++;
-    }
-    read();
-    if (butup==1){
-      ppp= "      cat       ";
-      break;
-    }
-  }
+  
+  // Variable for animation control (do not remove)
+  int repeat = 0;
 }
 
+// Function to read button states
 void read() {
-  // Update button states
-  butup = digitalRead(butUpPin);     
-  butdown = digitalRead(butDownPin);  
-  delay(200);
+  butok = digitalRead(butokPin);     // Read OK button state
+  butdown = digitalRead(butDownPin);  // Read Down button state
+  delay(150);  // Short delay for debouncing
 }
 
-String printpage(const String arr[], int sizeArr, String pp) {
-  int i = 0; // LCD cursor row (0-3)
-  int j = 0; // Page index (0 to size)
+// Function to display and navigate through menu pages
+String printpage(const String arr[], int sizeArr, String currentPage, String previousPage) {
+  int i = 0; // Row of the LCD
+  int j = 0; // Index for current menu option
 
-  while (pp == ppp) {
-    read();
-    lcd.setCursor(13, i);
+  while (currentPage == page_name) {
+    read();  // Read button states
+    lcd.setCursor(13, i);   // Set cursor for "<<" indicator
     lcd.print(" <<");
-    lcd.setCursor(0, i);
+    lcd.setCursor(0, i);     // Set cursor for ">>" indicator
     lcd.print(">> ");
 
+    // Display menu items
     for (int d = 0; d < lcdsize; d++) {
-      lcd.setCursor(2, d);
+      lcd.setCursor(2, d);  // Set cursor for each option
       if (j >= lcdsize) {
-        lcd.print(arr[j + d - lcdsize + 1]);
+        lcd.print(arr[j + d - lcdsize + 1]);  // Display next options if j exceeds lcdsize
       } 
-      else if (d >=sizeArr){
-        lcd.print("            ");
-        
+      else if (d >= sizeArr) {
+        lcd.print("            ");  // Clear if there are fewer options than the lcdsize
       }
       else {
-        lcd.print(arr[d]);
+        lcd.print(arr[d]);  // Display option text
       }
     }
 
-    j = j % sizeArr;
-    if(sizeArr < lcdsize){i = (i ) % sizeArr;}
-    else {i = (i ) % lcdsize;}
+    j = j % sizeArr;  // Ensure j stays within array size
+    if (sizeArr < lcdsize) { i = (i ) % sizeArr; }  // Ensure index stays within screen range
+    else { i = (i ) % lcdsize; }  // Ensure index stays within LCD rows
+    //////////// ADD YOUR BACKGROUND CODE HERE ///////////////
     ///////////////////////////////////////////////////////
-    /////////////////////RF////////////////////////////////
     ///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
+    
+
+
+
+    ///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////
+    // Handle button navigation
     if (butdown == 1) {
       lcd.setCursor(13, i);
       lcd.print("   ");
       lcd.setCursor(0, i);
       lcd.print("   ");
-      j = (j + 1) % sizeArr;
-      if(sizeArr < lcdsize){i = (i + 1) % sizeArr;}
-      else {i = (i + 1) % lcdsize;}
+      j = (j + 1) % sizeArr;  // Move to next option
+      if (sizeArr < lcdsize) { i = (i + 1) % sizeArr; }
+      else { i = (i + 1) % lcdsize; }
     }
+
     if (j > i) {
-      i = lcdsize - 1;
+      i = lcdsize - 1;  // Ensure scrolling is within bounds
     }
-    if (butup == 1) {
-      lcd.setCursor(17, i);
+
+    // Handle "OK" button press for selection
+    if (butok == 1) {
+      lcd.setCursor(17, i);  // Clear selected option
       lcd.print("   ");
       lcd.setCursor(0, i);
       lcd.print("   ");
-      if (arr[j]=="    back    "){
-        ppp = "page1";
+      if (arr[j] == "    back    ") {
+        page_name = previousPage;  // Go back to the previous page
       }
-      else{
-      ppp = arr[j];}
-      lcd.clear();
+      else {
+        page_name = arr[j];  // Navigate to the selected page
+      }
+      lcd.clear();  // Clear screen after selection
       break;
     }
   }
 
-  return ppp;
+  return page_name;  // Return the current page name
 }
