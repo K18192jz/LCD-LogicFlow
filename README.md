@@ -1,8 +1,6 @@
 # LCD LogicFlow: Flexible Menu Navigation
 
-![EX:1](https://github.com/user-attachments/assets/ca7f616c-705e-4055-80c9-a1262699a55d)
-
-![EX2](https://github.com/user-attachments/assets/faa08660-f00c-4ab6-aeee-a5d98c7ff17b)
+  ![EX2](https://github.com/user-attachments/assets/faa08660-f00c-4ab6-aeee-a5d98c7ff17b)
 
 
 
@@ -115,3 +113,4 @@ This is a fully open-source code, and anyone is free to use, modify, or add anyt
 
 I’m happy to help anyone using this code, Feel free to contact me if you need assistance👽✨. 
 
+![EX:1](https://github.com/user-attachments/assets/ca7f616c-705e-4055-80c9-a1262699a55d)
