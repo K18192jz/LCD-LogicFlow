@@ -5,7 +5,7 @@
 const int butokPin = 7;      
 const int butDownPin = 8;
 int butok, butdown;
-String page_name = "    Main    ";  // Initialize the page to "Main"
+
 
 // LCD setup
 int lcdsize = 2;
